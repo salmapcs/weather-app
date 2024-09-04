@@ -1,5 +1,12 @@
 const apiKey = 'your_openweathermap_api_key';
 
+function updateDateTime() {
+    const now = new Date();
+    const date = now.toLocaleDateString(undefined, { day: '2-digit', month: 'long', year: 'numeric' });
+    const time = now.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
+    document.getElementById('datetime').textContent = `${date} | ${time}`;
+}
+
 async function getWeather() {
     const city = document.getElementById('cityInput').value;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -43,3 +50,7 @@ function clearWeatherData() {
     document.getElementById('sunrise').textContent = '';
     document.getElementById('sunset').textContent = '';
 }
+
+// Update the date and time every minute
+setInterval(updateDateTime, 60000);
+updateDateTime(); // Initial call to set the time immediately
