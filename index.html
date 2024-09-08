@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="appContainer">
         <div class="header">
             <div class="datetime" id="datetime"></div>
         </div>
@@ -22,11 +22,15 @@
                 <div class="temp-container">
                     <div id="temperature" class="temperature"></div>
                     <div class="weather-details">
+                        <p id="description"></p>
+                        <p id="feelsLike"></p>
                         <p id="humidity"></p>
+                        <p id="windSpeed"></p>
                         <p id="sunrise"></p>
                         <p id="sunset"></p>
                     </div>
                 </div>
+                <img id="weatherIcon" class="weather-icon" alt="Weather Icon">
             </div>
         </div>
     </div>

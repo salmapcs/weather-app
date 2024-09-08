@@ -6,7 +6,6 @@
 }
 
 body {
-    background: linear-gradient(135deg, #4f86f7, #6ad4f7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,4 +104,10 @@ body {
 .weather-details p {
     font-size: 1.2em;
     margin-bottom: 10px;
+}
+
+.weather-icon {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
 }
